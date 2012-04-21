@@ -21,20 +21,27 @@ colors
 autoload -U add-zsh-hook
 autoload -Uz vcs_info
 
-#use extended color pallete if available
-if [[ $TERM = *256color* || $TERM = *rxvt* ]]; then
-    turquoise="%F{81}"
-    orange="%F{166}"
-    purple="%F{135}"
-    hotpink="%F{161}"
-    limegreen="%F{118}"
-else
-    turquoise="$fg[cyan]"
-    orange="$fg[yellow]"
-    purple="$fg[magenta]"
-    hotpink="$fg[red]"
-    limegreen="$fg[green]"
-fi
+# #use extended color pallete if available
+# if [[ $TERM = *256color* || $TERM = *rxvt* ]]; then
+#     turquoise="%F{81}"
+#     orange="%F{166}"
+#     purple="%F{135}"
+#     hotpink="%F{161}"
+#     limegreen="%F{118}"
+# else
+#     turquoise="$fg[cyan]"
+#     orange="$fg[yellow]"
+#     purple="$fg[magenta]"
+#     hotpink="$fg[red]"
+#     limegreen="$fg[green]"
+# fi
+
+# Allways uses system themes (for better solarized integration)
+turquoise="$fg[cyan]"
+orange="$fg[yellow]"
+purple="$fg[magenta]"
+hotpink="$fg[red]"
+limegreen="$fg[green]"
 
 # enable VCS systems you use
 zstyle ':vcs_info:*' enable git svn
